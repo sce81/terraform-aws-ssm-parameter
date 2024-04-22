@@ -7,7 +7,7 @@ resource "aws_ssm_parameter" "main" {
   tags = merge(
     local.common_tags, var.extra_tags,
     tomap({
-      Name = "${var.name}-${var.env}-ssh-key"
+      Name = "${var.name}-${var.env}-parameter"
     })
   )
 }
