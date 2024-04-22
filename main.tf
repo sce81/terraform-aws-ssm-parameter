@@ -1,5 +1,5 @@
 resource "aws_ssm_parameter" "main" {
-  name        = "${var.name}-${var.env}/${var.parameter_name}"
+  name        = "/${var.name}-${var.env}/${var.parameter_name}"
   description = var.description
   type        = var.type
   value       = var.value
